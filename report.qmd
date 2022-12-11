@@ -1,0 +1,39 @@
+---
+title: "Oppsummering"
+format: html
+editor: visual
+---
+
+## Quarto
+
+```{r setup}
+#| include: false
+
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE)
+source("r-rec.R")
+```
+
+Oppsummering av resultatregnskap og balane pr `r paste(tmp$regnskapsperiode$tilDato)`.
+
+```{r}
+knitr::kable(t(v))
+```
+
+Det kommer frem at selskapet har kortsikrig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$kortsiktigGjeld)` og langsiktig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$langsiktigGjeld)`. 
+
+
+
+## Resultat
+
+```{r}
+knitr::kable(t(tmp$resultatregnskapResultat))
+```
+
+
+```{r}
+tmp$egenkapitalGjeld$gjeldOversikt$sumGjeld / tmp$eiendeler$sumEiendeler
+```
+
+```{r}
+tmp$egenkapitalGjeld$egenkapital$sumEgenkapital / tmp$eiendeler$sumEiendeler
+```

@@ -1,0 +1,39 @@
+host = "https://data.brreg.no"
+req  = "/regnskapsregisteret/regnskap/"
+orgnum = "922944997"
+
+#library(tidyverse)
+pacman::p_load(tidyverse, jsonlite, rvest, xml2)
+url <- str_c(host, req, orgnum)
+
+# tmp <- curl::curl(url = paste(url))
+
+#rvest::read_html("https://data.brreg.no/regnskapsregisteret/regnskap/922944997")
+
+
+req <- curl::curl_fetch_memory(url)
+
+str(req)
+
+tmp <- jsonlite::prettify(rawToChar(req$content)) %>% 
+  jsonlite::fromJSON() %>% as_tibble()
+
+(
+  tmp$eiendeler$omloepsmidler$sumOmloepsmidler
+) + (tmp$eiendeler$anleggsmidler$sumAnleggsmidler)
+
+
+# tmp <- jsonlite::fromJSON(tmp) %>% as_tibble()
+
+# Resultatregnskap
+v <- tmp$resultatregnskapResultat
+
+t(v)
+
+# Balanse
+
+v <- tmp$egenkapitalGjeld
+
+t(v)
+
+
