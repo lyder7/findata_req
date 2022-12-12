@@ -3,7 +3,7 @@
     "path": "~/develop/lyder7-github/findata_req/r-rec.R",
     "project_path": "r-rec.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "1481414534",
     "contents": "",
     "dirty": false,
     "created": 1670801554390.0,
@@ -11,14 +11,16 @@
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "47,0",
+        "scrollLine": "32"
     },
     "folds": "",
-    "lastKnownWriteTime": 1670799390,
+    "lastKnownWriteTime": 1670805596,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1670799390,
+    "last_content_update": 1670805596377,
     "read_only": false,
     "read_only_alternatives": []
 }
