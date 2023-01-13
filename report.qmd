@@ -19,16 +19,13 @@ Oppsummering av resultatregnskap og balane pr `r paste(tmp$regnskapsperiode$tilD
 knitr::kable(t(v))
 ```
 
-Det kommer frem at selskapet har kortsikrig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$kortsiktigGjeld)` og langsiktig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$langsiktigGjeld)`. 
-
-
+Det kommer frem at selskapet har kortsikrig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$kortsiktigGjeld)` og langsiktig gjeld pålydene `r paste(tmp$egenkapitalGjeld$gjeldOversikt$langsiktigGjeld)`.
 
 ## Resultat
 
 ```{r}
 knitr::kable(t(tmp$resultatregnskapResultat))
 ```
-
 
 ```{r}
 tmp$egenkapitalGjeld$gjeldOversikt$sumGjeld / tmp$eiendeler$sumEiendeler

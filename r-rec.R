@@ -1,6 +1,6 @@
 host = "https://data.brreg.no"
 req  = "/regnskapsregisteret/regnskap/"
-orgnum = "982463718"
+orgnum = "915073557"
 
 
 #https://data.brreg.no/regnskapsregisteret/regnskap/922944997?%C3%A5r=2020&regnskapstype=SELSKAP
