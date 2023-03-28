@@ -8,18 +8,23 @@ Installasjon
 For å installere findata_req, bruk pip:
 
 Copy code
+```
 pip install findata_req
-Bruk
-Eksempel på hvordan du bruker findata_req for å hente informasjon om en finansiell entitet:
+```
+
+
+
+### Eksempel på hvordan du bruker findata_req for å hente informasjon om en finansiell entitet:
 
 python
-Copy code
+```
 from findata_req import EntityRequest
 
 req = EntityRequest()
 entity_data = req.get_entity_data("123456789") # erstatt med organisasjonsnummeret du vil hente data for
 print(entity_data)
-Dokumentasjon
+```
+### Dokumentasjon
 Du kan finne dokumentasjon for Skatteetaten sitt delingssenter API her:
 
 saf-t skatteetaten
