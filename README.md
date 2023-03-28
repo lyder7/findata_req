@@ -1,4 +1,7 @@
-findata_req
+## **findata_req**
+
+
+
 findata_req er et Python-bibliotek for å hente finansiell entitetsinformasjon i Norge fra Skatteetaten sitt delingssenter API.
 
 Installasjon
